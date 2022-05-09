@@ -1,0 +1,125 @@
+Assignment 3
+_______________
+
+
+1. Explain polymorphism ?
+       poly means --- many and  morphism-- forms  
+               one person may  have differnt behivour in differnt palces...
+
+               method name, same  classs (mutiple arguraments)....overloading methods
+               method name same, different class (  same argrurments ) .....  overridng 
+
+                method overLoading/method OverRiding is an example
+
+
+   
+2. What is overloading ?
+      it  occur when two or more methods in one class have the same method name but different 
+      parameter 
+
+3. What is overriding ?
+    it occurs when u have to over ride the parent class method to its child class and 
+    have to be same method name and same arguments or parmeter
+
+4. what does the final mean in this method : public void something(final Car 
+aCar){ }
+      -- it  means that you cannot change the reference it keep constant
+    
+
+5. Suppose  in question 4, the Car class has a method setColor(Color color)(...),
+   inside doSomething method ,Can  we call aCar.setColor(red); ?
+    --YES
+
+6. Can we declare a static variable inside a method ?
+   --YES
+
+7. What is the differnce between interface and abstract class ?
+   Interface contains only abstract methods              Abstract  class may have  abstract and non abstract methods
+    it need to extens or implements to other class       Cannot able to create object of abstract class
+
+
+8. Can an abstract class be defined without any abstract methods ?
+ -- YES
+
+9. Since there is no way to create an object of abstract class,what's the point of
+   constructors of abstract class ?
+        1) Abstract classes have constructors and those constructors are always invoked when a concrete subclass is instantiated.
+          We know that when we are going to instantiate a class, we always use constructor of that class. 
+              Now every constructor invokes the constructor of its super class with an implicit call to super().
+
+       2) We know constructor are also used to initialize fields of a class. We also know that abstract classes may contain fields 
+         and sometimes they need to be initialized somehow by using constructor.
+ 
+
+10. What is a native method ?
+      A native method in Java is a method whose implementation is written in other languages such as c and c++.
+
+       The ‘native’ keyword is used before a method to indicate that it is implemented in other language.
+
+
+11. What is marker interface ?
+     Marker interface in Java is an interface that has no method declarations or fields in it. It is used as a tag to let the compiler
+     know it needs to add some special behavior to the class implementing marker interface. That is why marker interface is also known 
+      as tag interface in Java.
+
+12. Why to override equals and hashCode methods ?
+      because  Failure to do so will result in a violation of the general contract for Object.hashCode(), which will prevent your class
+      from functioning properly in conjunction with all hash-based collections, including HashMap, HashSet, and Hashtable.
+
+13. What is the differnce between int and Integer ?
+      Int it a data type                        Integer is a wrapper class
+      its helps to store value into memory      it helps in converting int into object and to convert an object into
+                                                  int as per requirement.
+      it doesnot allow any buit infuction        it have built in funtion
+
+
+14. What is serialization ?
+    -- Serialization is the conversion of the state of an object into a byte stream
+
+   
+15. Create List and Map. List A contains 1,2,3,4,10(integer) . Map B contains
+("a","1") ("b", "2") ("c", "10") (key = string, value = string)
+Question: get a list which contains all the elements in list A, but not in map B.
+ 
+  
+public class ListandMap {
+	
+	public static void main(String[] args) {
+	
+	List<Integer>list =new ArrayList<>();
+	list.add(1);
+	list.add(2);
+	list.add(3);
+	list.add(4);
+	list.add(10);
+	
+	Map<String, String> map = new HashMap<>();
+	map.put("a","1");
+	map.put("a","2");
+	map.put("a","10");
+	
+	
+	List<Integer>listResult =new ArrayList<>();
+	for(int i=0;i<list.size();i++) {
+		int abc = list.get(i);
+		String xyzString = Integer.toString(abc);
+		if (!map.containsKey(xyzString)) {
+			listResult.add(abc);
+		}
+	}
+	System.out.println(listResult);
+}
+}
+
+
+16. Implement a group of classes that have common behavior/state as Shape.
+Create Circle, Rectangle and Square for now as later on we may need more
+shapes. They should have the ability to calculate the area. They should be able
+to compare using area. Please write a program to demonstrate the classes and
+comparison. You can use either abstract or interface. Comparator or
+Comparable interface.
+
+
+
+
+ 

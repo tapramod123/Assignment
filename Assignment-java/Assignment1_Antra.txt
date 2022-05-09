@@ -1,0 +1,176 @@
+Assignment	1
+_____________________
+
+1. What is JDK ? JRE ? JVM ?
+
+JDK : 
+     It stands for Java Development Kit  which provides environment for developing and
+     running  java application
+    JDK = Jre + Development tools
+
+
+JRE: 
+  It stands for Java Runtime Enviroment which provides environment only to run java application.
+  JRE = JVM + Library classes
+
+JVM :
+ It stands for  Java Virtul Machine.
+  it is a interpreater which is responsible to run our java programme line  by line.
+ if any exception occur in any  line then the application stop working.
+  
+
+2. What is java Complier ?
+  Java complier is a complier for the programming language java.
+ A complier translates the entire source code into a machine-code file or any intermediate code,
+ and that file can be used to get output on java class files or byte code
+
+
+3. Why is java platform independent?
+    
+    because java compile code in ( .class file or byte code) which can run on all operating system whether in windows, linux, unix 
+if the code is compile once it can run in any operating system but c  and c++ the code have to complile every single time it is 
+being run in any other operating sytem
+
+4. What is IDE and why it is important for developers?
+   it stands for Integrated Development Environment.
+it is a soft ware with useful functionalites for developers ,enables programmers to consolidate the different aspects of writing a 
+computer program.
+
+It is important because
+it helps to increase programmer productivity by providing source code editor,
+file managment, debugger, complier or interpreter, respository version control  etc.
+
+
+5. Is Java case sensitive?
+   Yes it is because the upper or lower case of the letter in your java programs matter.
+
+
+6. What do the following keywords do?
+
+static   :  The static keyword in Java is used to share the same variable or method of a given class.
+          it is a key word  which is  used to call a method /variables without any creation Of Obejct
+
+public   :  They can be accessed from anywhere in the program. This means it can be used from the same or 
+           different classes and the same or a different package.
+
+final    : it is a keyword which is used to provide restriction to the user.
+            Final : works based on situation
+        final with varibales   : varibale will be constant
+        final with methods     :methods cannot be overridden
+        final with classs      :class not be inheritance
+
+
+private  : They restrict the keywords to a higher level by not allowing them to be accessed from anywhere outside the class itself.
+
+void     : it will not return anything.
+ 
+null     : null is reserved words which is literal(value) similar to true and flase and it is anytype reference which means 
+           [ array, class, interface, enum, annotaion]
+
+package  : a package arrange number of classes,interfaces and sub-packages of same type into a paticular group
+
+class    :it is a collection of methods, object , variables
+
+new      : new keyword creats new objects and it is used to  allocate dynamic memory in run time
+
+
+
+7. What is premitive type and referance type?
+    
+    Premitive type :
+    Primitive data types in Java are predefined by the Java language and named as the reserved keywords.
+     They are 8 types:
+   1. int 
+   2. long
+   3. float
+   4. double
+   5. short
+   6. char
+   7. byte
+   8. boolean
+
+
+ Referece Type:  
+      Reference datatypes in java are those which contains reference/address of dynamically created objects
+          Classes, interfaces, arrays, enumerations, and, annotations are reference types in Java.
+          Reference variables hold the objects/values of reference types in Java.
+      
+
+8. Is parameter  passed  by value or reference?
+  it is usually passed by value,however it depend upon context if we're dealing with Primitives or Objects: 
+ For Primitive types, parameters are pass-by-value. For Object types, the object reference is pass-by-value.
+
+
+
+9. what is the output: System.out.println(1>0:"A":"B");
+
+        it will give you a compile time errors
+
+
+10. How to define constants in java ?
+        by using final key word  we can make constants
+
+
+11. What is String ? Is it primitive type?
+  String are object that allows us to store sequence of character which may conatin
+  alpha-numeric value enclosed in double closed.
+  it is immutable in java  if u create a object of string then you coulnot change later
+   it conatins  methods that can perform certain opertions on string they are:
+  concat(), equals(), length() etc..
+
+It is non premetitvdata types because it stores references.
+
+
+
+12.  How to check if a String is representing a number?
+        We could use Integer.valueOf() method to convert string.If it does work then this string[
+       is representing a number
+         
+13. Write a program to implement the following activity diagram.
+
+
+
+14. Write a program to merge two array of int
+    
+      public class CheckIn {
+
+	public static void main(String[] args) {
+	
+		int [] arr1 = {1,3,5,7};
+		int [] arr2= {2,4,6,8};
+		
+		 int  abc = arr1.length;
+		 int  bcd = arr2.length;
+		 int xyz = abc+bcd;
+		 
+		 int[] newArr = new int[xyz];
+		 for(int i=0;i<abc;i++) {
+			 newArr[i]=arr1[i];
+		 }
+		 for(int i =0;i<bcd;i++) {
+			 newArr[i+abc]=arr2[i];
+		 }
+		
+		 System.out.println(Arrays.toString(newArr));
+		
+	}
+
+}
+
+
+15. Write a program to find the second largest number insid an array of int.
+
+     public class findSecondLargeNum {
+
+	public static void main(String[] args) {
+	int arr[] = {213,5,9,8,10,15};
+	Arrays.sort(arr);
+	System.out.println(arr[arr.length-2]);
+	}
+
+}
+     
+
+
+
+      

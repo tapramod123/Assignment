@@ -1,0 +1,132 @@
+Assignment	4
+_____________________
+
+
+1. What’s the difference between final, finally? What	is	finalize()?
+   Final : it is a keyword and access modifier which is used to apply 
+          restriction on a class ,mehod or variable
+
+  Finally : it is block in java exception handling  which is executed 
+            whether the exception occurs or not in a code
+
+  Finalize : it is a method in java which is used to perform clean up 
+             processing just before object is garbage collected
+
+2. What’s the difference between throw and throws?
+    Throw: The throw keyword is used inside a method or a block of code.
+
+    Throws: The throws keyword is used with the method signature.
+  
+3. What are	the two types of exceptions?
+    Checked Exception  and UnChecked Exception 
+
+4. What is error in java?
+   Error is an illegal operation performed by the user which results in the abnormal 
+    working of the program. It can be classified into Runtime error and compile time 
+    error
+
+
+5. Exception is object,	true	or	false?
+   TRUE
+
+6. Can a finally block exist	with	a try	block	but	without a	catch?
+    YES
+
+7. From java 1.7, give	an example of the	try-resource feature.
+    
+  public void copyFile(File sourceFile, File destFile)
+        throws IOException {
+ 
+        FileChannel sourceChannel = null;
+        FileChannel destChannel = null;
+ 
+    try {
+        sourceChannel = new FileInputStream(sourceFile).getChannel();
+        destChannel = new FileOutputStream(destFile).getChannel();
+        sourceChannel.transferTo(0, sourceChannel.size(), destChannel);
+    } finally {
+        if (sourceChannel != null) {
+            sourceChannel.close();
+        }
+        if (destChannel != null) {
+            destChannel.close();
+        }
+    }
+}
+
+
+8. What will happen to the Exception object after exception	handling?
+   The Exception object will be garbage collected in the next garbage collecetion.
+
+9. Can we use String as	a condition	in switch(str){} clause?
+   YES
+
+10. What’s the difference between ArrayList, LinkedList and	vector?
+
+       Array List                           Linked list                                              Vector                    
+
+  Array is collectio of  homogenous        It is  collection of  node (data and address            it is similar with array list to use 
+  data type															   dyamic array but it is synchronized
+  
+  it maintain insertion order              it does not provide random access				  vector is slower than array list
+  
+  it provide random access
+  
+  it consusme less memory than             it store  the next and prevoius references along        vector implements a dynamcic array that means
+  linked list					 with data so consume more memory                         it can grow or shrink as required
+  
+  Manupulation is solwer because if        it it fater being node based as not much bit shifting 
+  elemets is remove then it have to        required
+  shift all bits in memory 
+
+  
+
+11. What’s	the difference between	hashTable	and	hashMap?
+    
+    HashMap                                           HashTable
+   
+  No method is sunchronized			    Every  method is sunchronized
+  
+  No thread safe					    Thread safe
+   
+  Null is allowed for both key                Null is not allowed for both key and value
+  value    
+  
+  It has fast performance because thread     it is slow performance because it increase 
+   are not required to wait 			    waitoing time of the thread
+
+
+12. What is	static import?
+   Static import is a feature which provides the facility to access static members of a class directly 
+    without using class name.
+
+
+13. What is	static block?
+    The static block is a block of statement inside a Java class that will be executed when a class is first loaded into the JVM. 
+     A static block helps to initialize the static data members, just like constructors help to initialize instance members.
+
+14. Explain	the	keywords:
+
+     default(java 1.8)   : The default key word specifies some code to run if there is no case  match in the switch
+
+     break  :        It is used to terminate loops and switch statements in java
+
+     continue:     It is used to end the current iteration in a for loop or while loop and continues to the next iteration
+
+     synchronized:  It is process of allowing only a single thread to access the shared data or resource at a particular point of time . 
+   
+     strictfp :     it ensure for getting same  result on every platform if you perform opertiona in the floating point variables
+
+     transient:    Transient in Java is used to mark the member variable not to be serialized when it is persisted to streams of bytes
+
+     volatile:     Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe.
+
+     instanceOf:   Instance of keyword checks whether an object is an instance of a specific class or an interface
+
+
+15. Create	a program including two	threads – thread	read	and	thread write.
+Input	file	->Thread	read	->	Calculate	->	buffered area
+Buffered area	->	Thread write	->	output file
+Detailed	description	is in	assignment4.txt	file.
+Sample input.txt	file.
+Attached	files	are	input.txt and a	more	detailed	description	file

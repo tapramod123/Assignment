@@ -1,0 +1,75 @@
+Assignment	2
+_____________________
+
+1.  Why we need packages in java ?
+     it helps to group the related class together  hence providing convenience and order.
+     Its like a folder in a file which keeps maintainable code in visibility and accessibility.
+
+2. What is the default imported package?
+    Java compiler imports " java.lang package " internally by default. It provides the fundamental classes 
+    that are necessary to design a basic Java program. 
+  
+3. What is Class? What is object ? 
+  Class is a blueprint of an object which contains  methods, object , variables.
+  
+  Object : it is a instance of class that execute class.Once the object is created
+           it takes a space like other variable in memory
+
+
+4. Why we need constructor?
+   Constructor is the first method that is invoke when you create an object. 
+    The main reason for having the constructor is to initialize the variables
+
+5. What is the default  value of local variable? What is the default value of instance
+   variable?
+   
+   local variable :  The local variable do not have any default value;
+    
+   Instance Variable : Instance variable have default values like for number default value is 0,
+                      Boolean it is false, Object referneces it is null.
+ 
+6. What is garbage collection ?
+    it is an automatic process of java which perfrom memory managment by deleting unused objects
+
+7. The protected data can be accessed by subclasses or same package.Ture or False ?
+    TRUE
+
+8. What is immutable class ?
+    it means once object is created we cannot change the content or its value.
+   for that : class should be final 
+              variable should be private and final
+              setter method shouldnot be exist 
+
+9. What is the difference between "==" and equals method ?
+   " =="       --> It is majorly used to compare the reference values and objects.
+    "equals"  ---> It is used to compare the actual content of the object.
+
+10. What is wrapper class ?
+    Wrapper class is used to convert primitive data type into object and vice-versa.
+
+11. What is autoboxing ?
+     Auto boxing : it is the conversion of primitive data type  to object 
+
+12. StringBuilder is threadsafe but slower than StringBuffer, true or false ?
+     False
+
+13. Constructor can be inherited, true or false ?
+     False
+
+14. How to call a super class's constructor ?
+    By Using "Super Keyword "
+
+15. Which class is the super class of all classes ?
+    Object Class
+
+16. Create a program to count how many files/folders are there inside the folder.
+    . the count method should take a parameter called Criteria like this :
+       count (Criteria criteria){}
+    . for Criteria class multiple condiitons should be included such as :folder
+	path includeSubFolder or not the extension of the file be counted and so  on
+    .Optional:Take the input from keyboard
+    . Take  care of the invalid inputs.Exception handling
+    . Get proper result displayed
+    . "There are XXX files and XXX foldrs inside folder XXX with extension XXX or 
+      something user friendly.
+
